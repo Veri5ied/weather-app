@@ -1,55 +1,55 @@
 import React from "react";
 
-const Weather = (props) => {
+const Weather = ({temp, city, country, humidity, desc, error}) => {
   return (
     <div className="weather__info">
-      {props.city &&
-        props.country(
+      {city &&
+        (
           <p className="weather__key">
             Location:
             <span className="weather__value">
               {" "}
-              {props.city}, {props.country}
+              {city}, {country}
             </span>
           </p>
         )}
 
-      {props.temp && (
+      {temp && (
         <p className="weather__key">
           Temperature:
-          <span className="weather__value"> {(props.temp * 9) / 5 + 32} F</span>
+          <span className="weather__value"> {(temp * 9) / 5 + 32} F</span>
         </p>
       )}
 
-      {props.temp && (
+      {temp && (
         <p className="weather__key">
           Temperature:
-          <span className="weather__value"> {(props.temp * 9) / 5 + 32} F</span>
+          <span className="weather__value"> {(temp * 9) / 5 + 32} F</span>
         </p>
       )}
 
-      {props.temp && (
+      {temp && (
         <p className="weather__key">
           Temperature:
-          <span className="weather__value"> {(props.temp * 9) / 5 + 32} F</span>
+          <span className="weather__value"> {(temp * 9) / 5 + 32} F</span>
         </p>
       )}
 
-      {props.humidity && (
+      {humidity && (
         <p className="weather__key">
           Humidity:
-          <span className="weather__value"> {props.humidity}</span>
+          <span className="weather__value"> {humidity}</span>
         </p>
       )}
 
-      {props.desc && (
+      {desc && (
         <p className="weather__key">
           Description:
-          <span className="weather__value"> {props.desc}</span>
+          <span className="weather__value"> {desc}</span>
         </p>
       )}
 
-      {props.error && <p className="weather__error"> {props.error} </p>}
+      {error && <p className="weather__error"> {error} </p>}
     </div>
   );
 };
