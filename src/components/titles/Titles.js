@@ -5,7 +5,7 @@ const Titles = () => {
     <div>
       <h1 className="title-container__title">Weather Finder</h1>
       <p className="title-container__subtitle">
-        Explore temperature, conditions and more...
+        Explore current weather...
       </p>
     </div>
   );
