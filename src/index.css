@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "poppins"
+  font-family: "poppins";
 }
 
 .wrapper {
@@ -63,7 +63,6 @@ input[type="text"] {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
   -webkit-text-fill-color: #fff !important;
 }
 

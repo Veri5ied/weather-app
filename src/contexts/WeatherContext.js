@@ -2,6 +2,8 @@ import React, { createContext, useState } from "react";
 
 export const WeatherContext = createContext();
 
+const API_KEY = "8abfe44428c274d36f87c9cb6f7ac285";
+
 const WeatherContextProvider = (props) => {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
@@ -10,9 +12,8 @@ const WeatherContextProvider = (props) => {
   const [humidity, setHumidity] = useState("");
   const [desc, setDesc] = useState("");
 
-  const API_KEY = "8abfe44428c274d36f87c9cb6f7ac285";
-
   const fetchWeather = async (e, city, country) => {
+    e.preventDefault();
     try {
       const api_call = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
