@@ -21,20 +21,6 @@ const Weather = ({temp, city, country, humidity, desc, error}) => {
         </p>
       )}
 
-      {temp && (
-        <p className="weather__key">
-          Temperature:
-          <span className="weather__value"> {(temp * 9) / 5 + 32} F</span>
-        </p>
-      )}
-
-      {temp && (
-        <p className="weather__key">
-          Temperature:
-          <span className="weather__value"> {(temp * 9) / 5 + 32} F</span>
-        </p>
-      )}
-
       {humidity && (
         <p className="weather__key">
           Humidity:
