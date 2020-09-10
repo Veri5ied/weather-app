@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import Title from "../titles/Titles";
+import Form from "../form/Form";
+import Weather from "../weather/Weather";
+import { WeatherContext } from "../../contexts/WeatherContext";
 
 const WeatherDisplay = () => {
+  const {
+    city,
+    country,
+    temp,
+    error,
+    humidity,
+    desc,
+    fetchWeather,
+  } = useContext(WeatherContext);
   return (
     <div className="wrapper">
       <div className="main">
